@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Pack } from "@potion/layout";
 import { Svg, Circle } from "@potion/element";
+import { Pattern } from '@potion/extra';
 
 const Bubbles = ({ colors }) => {
   const [bubbleData, setBubbleData] = useState([]);
@@ -24,8 +25,9 @@ const Bubbles = ({ colors }) => {
           size={[400, 400]}
           includeRoot={false}
           nodeEnter={d => ({ ...d, r: 0 })}
-          animate
+          animate  
         >
+        
           {nodes =>
             nodes
               .map(({ x, y, r, key }, i) => {
