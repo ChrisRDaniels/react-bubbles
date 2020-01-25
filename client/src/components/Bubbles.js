@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Pack } from "@potion/layout";
 import { Svg, Circle } from "@potion/element";
-import { Pattern } from '@potion/extra';
 
 const Bubbles = ({ colors }) => {
   const [bubbleData, setBubbleData] = useState([]);
