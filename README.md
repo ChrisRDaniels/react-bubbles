@@ -24,14 +24,30 @@ In this project you will create a login page and request a token from the server
 
 - [Color-Hex](https://www.color-hex.com/)
 
+
+
 ## Self-Study/Essay Questions
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] Explain what a token is used for.
+
+A token is used to authenticate users. Each user will have a unique token that allows them permissions see/interact with portions of a website that someone would not see at first glance without a token.
+
 - [ ] What steps can you take in your web apps to keep your data secure?
+
+To help keep your apps and data secure you want to try and setup a token with either localStorage or even better sessionStorage. That way the token information is not widely displayed for others to see/find. It is also good practice to try and use git ignore on the file that houses the secret code that allows a token to be decrypted. this way when pushed to github or another hosting site it is not public knowledge.
+
 - [ ] Describe how web servers work.
+
+A web server processes incoming network calls. It is primarily responsible for storing,processing and delivering web pages to clients. The way that this communication between client and server happens is via HTTP over the world wide web.
+
 - [ ] Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+
+Create - POST
+Read - GET
+Update - PUT(or PATCH)
+Delete - DELETE
 
 
 ## Project Set Up
