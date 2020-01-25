@@ -24,8 +24,9 @@ const Bubbles = ({ colors }) => {
           size={[400, 400]}
           includeRoot={false}
           nodeEnter={d => ({ ...d, r: 0 })}
-          animate
+          animate  
         >
+        
           {nodes =>
             nodes
               .map(({ x, y, r, key }, i) => {
