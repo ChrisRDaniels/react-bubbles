@@ -83,6 +83,7 @@ const ColorList = ({ colors, updateColors }) => {
           .then((res) => {
             updateColors(res.data);
           })
+          .then()
           .catch((err) => {
             console.log();
             console.log(res.data.payload);
@@ -103,7 +104,7 @@ const ColorList = ({ colors, updateColors }) => {
 
   return (
     <div className='colors-wrap'>
-      <p>colors</p>
+      <p>Colors List</p>
       <ul>
         {colors.map((color) => (
           <li key={color.color} onClick={() => editColor(color)}>
@@ -128,9 +129,9 @@ const ColorList = ({ colors, updateColors }) => {
       </ul>
       {editing && (
         <form onSubmit={saveEdit}>
-          <legend>edit color</legend>
+          <legend>Edit Color</legend>
           <label>
-            color name:
+            Color Name:
             <input
               onChange={(e) =>
                 setColorToEdit({ ...colorToEdit, color: e.target.value })
@@ -139,7 +140,7 @@ const ColorList = ({ colors, updateColors }) => {
             />
           </label>
           <label>
-            hex code:
+            Hex Code:
             <input
               onChange={(e) =>
                 setColorToEdit({
@@ -151,14 +152,14 @@ const ColorList = ({ colors, updateColors }) => {
             />
           </label>
           <div className='button-row'>
-            <button type='submit'>save</button>
-            <button onClick={() => setEditing(false)}>cancel</button>
+            <button type='submit'>Save</button>
+            <button onClick={() => setEditing(false)}>Cancel</button>
           </div>
         </form>
       )}
 
-      <div className='spacer' />
       {/* stretch - build another form here to add a color */}
+
       <form onSubmit={addColor}>
         <p>Enter New Color Name:</p>
         <input
@@ -174,7 +175,11 @@ const ColorList = ({ colors, updateColors }) => {
           name='hex'
           onChange={handleHexChange}
         />
-        <button style={{ margin: '10px auto' }}>Add New Color</button>
+        <div className='button-row'>
+          <button type='submit' style={{ margin: '10px auto' }}>
+            Add New Color
+          </button>
+        </div>
       </form>
     </div>
   );
